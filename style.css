@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: hsl(0, 0%, 87%);
+  font-family: 'Lato', sans-serif;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+}
+.container-calculator {
+  width: 400px;
+  height: 700px;
+  background-color: hsl(224,14%,15%);
+  border-radius: 2rem;
+  color: hsl(0, 0%, 87%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 20px  hsl(224,14%,15%);
+}
+.container-display {
+  width: 100%;
+  height: 35%;
+  background-color: hsl(230,20%,25%);
+  border-radius: 2rem;
+  box-shadow: inset 0 0 0 15px hsl(224,14%,15%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  font-size: 3rem;
+}
+.display {
+ padding: 0 2rem 2rem 0;
+}
+.container-buttons {
+  width: 95%;
+  height: calc(100% - 35%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.container-buttons div {
+  border-radius: 2rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: hsl(230,20%,25%);
+}
+
+.number, .operator,.all-clear, .clear-last-digit {
+  display: grid;
+  place-items: center;
+}
+.number:nth-child(17) {
+  grid-column: span 2;
+}
+
+.all-clear, .clear-last-digit, .operator:not(:nth-child(19)) {
+  background-color: hsl(240,12%,57%) !important;
+}
+.operator:nth-child(19){
+  background-color: hsl(26,91%,46%);
+}
