@@ -3,6 +3,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 body {
   height: 100vh;
@@ -36,7 +43,9 @@ body {
   font-size: 3rem;
 }
 .display {
- padding: 0 2rem 2rem 0;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 0 2rem 2rem 2rem;
 }
 .container-buttons {
   width: 95%;
@@ -45,25 +54,27 @@ body {
   grid-template-columns: repeat(4, 1fr);
   border-radius: 2rem;
   overflow: hidden;
+  cursor: pointer;
 }
 .container-buttons div {
   border-radius: 2rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   background-color: hsl(230,20%,25%);
+  font-size: 1.3rem;
 }
 
-.number, .operator,.all-clear, .clear-last-digit {
+.number, .operator,.all-clear, .clear-last-digit, .decimal{
   display: grid;
   place-items: center;
 }
-.number:nth-child(17) {
+.number:nth-child(16) {
+  grid-column: span 2;
+}
+.all-clear {
   grid-column: span 2;
 }
 
-.all-clear, .clear-last-digit, .operator:not(:nth-child(19)) {
+.all-clear, .clear-last-digit, .operator:not(:nth-child(18)) {
   background-color: hsl(240,12%,57%) !important;
-}
-.operator:nth-child(19){
-  background-color: hsl(26,91%,46%);
 }
