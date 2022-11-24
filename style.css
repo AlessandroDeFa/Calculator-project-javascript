@@ -13,7 +13,7 @@
 }
 body {
   height: 100vh;
-  background-color: hsl(0, 0%, 87%);
+  background-image: linear-gradient(to right, hsl(198,39%,31%), hsl(224,43%,32%));
   font-family: 'Lato', sans-serif;
   display: grid;
   place-items: center;
